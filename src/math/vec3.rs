@@ -4,7 +4,7 @@ use std::{
         Add, AddAssign, Div, DivAssign, Index, Mul, MulAssign, Neg, Rem, RemAssign, Sub, SubAssign,
     },
 };
-use num::{Num, traits::real::Real, Signed};
+use num::{Num, traits::real::Real, Signed, Zero};
 
 pub type F32x3 = Vec3<f32>;
 pub type F64x3 = Vec3<f64>;
@@ -18,9 +18,17 @@ pub struct Vec3<T>
     pub z: T,
 }
 
-impl<T: Num + Clone + Copy + Real + Signed + Mul + Sub> Vec3<T> {
+impl<T: Num + Clone + Copy + Real + Signed + Mul + Sub + Zero> Vec3<T> {
     pub fn new(x: T, y: T, z: T) -> Self {
         Self { x, y, z }
+    }
+
+    pub fn splat(v: T) -> Self {
+        Self {x: v, y: v, z: v}
+    }
+
+    pub fn zero() -> Self {
+        Self::splat(T::zero())
     }
 
     pub fn abs(self) -> Self {

@@ -1,2 +1,7 @@
 /target
 roket.code-workspace
+launch.csv
+rocketengines.jpg
+__pycache__/
+*.py[cod]
+ZegeSim-rs
