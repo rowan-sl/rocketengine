@@ -49,6 +49,25 @@ impl MotorSpec {
         }
     }
 
+    pub fn parse_from_str(name: &str) -> Option<Self> {
+        match name {
+            "i" => Some(Self::CrazyI),
+            "c6" => Some(Self::C6),
+            "d12" => Some(Self::D12),
+            "e6" => Some(Self::E6),
+            "e6_rct" => Some(Self::E6Rtc),
+            "e12" => Some(Self::E12),
+            "f15" => Some(Self::F15),
+            "f10" => Some(Self::F10),
+            "g12_rct" => Some(Self::G12Rtc),
+            "g12_st" => Some(Self::G12St),
+            "g11" => Some(Self::G11),
+            "g8_st" => Some(Self::G8St),
+            "h13" => Some(Self::H13),
+            _ => None,
+        }
+    }
+
     pub fn into_interpolated_thrust(self, time_step: f32) -> Vec<f32> {
         super::utils::interpolate_thrust(&self.into_raw_thrust(), time_step)
     }

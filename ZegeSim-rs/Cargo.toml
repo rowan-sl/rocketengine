@@ -1,15 +1,9 @@
 [package]
-name = "rocketengine"
+name = "zegesim-rs"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[workspace]
-members = [
-    "ZegeSim-rs"
-]
-
 [dependencies]
 num = "0.4.0"
 csv = "1.1.6"
@@ -21,12 +15,3 @@ assert_approx_eq = "1.1.0"
 version = "2.0"
 features = ["quaternion", "vector", "statistics"]
 
-[profile.speed]
-inherits = "release"
-lto = true
-codegen-units = 1
-
-[profile.smol]
-inherits = "speed"
-opt-level = "z"
-strip = true

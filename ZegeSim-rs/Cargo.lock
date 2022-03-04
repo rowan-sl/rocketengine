@@ -257,15 +257,3 @@ checksum = "56c1936c4cc7a1c9ab21a1ebb602eb942ba868cbd44a99cb7cdc5892335e1c85"
 dependencies = [
  "linked-hash-map",
 ]
-
-[[package]]
-name = "zegesim-rs"
-version = "0.1.0"
-dependencies = [
- "assert_approx_eq",
- "csv",
- "micromath",
- "num",
- "rand",
- "yaml-rust",
-]

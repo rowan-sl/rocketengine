@@ -1,4 +1,4 @@
-mod spec;
+pub mod spec;
 mod utils;
 
 use rand::prelude::*;
