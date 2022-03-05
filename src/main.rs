@@ -45,7 +45,7 @@ fn main() {
 
     let mut r = factory.at(F64x3::new(0.0, 0.0, 5.0));
 
-    let mut logger = Logger::open_file("launch.csv".into()).unwrap();
+    let mut logger = Logger::open_file("out/launch.csv".into()).unwrap();
 
     r.light_engine("ascent".into());
 

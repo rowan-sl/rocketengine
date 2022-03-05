@@ -13,12 +13,12 @@ class plotter:
 
     """Data visualization class"""
 
-    def __init__(self) -> None:
+    def __init__(self, file) -> None:
         """initializes data visualizer"""
 
         self.data_descriptions: list = []
         self.header: str = ""
-        self.viewer: dataVisualiser = dataVisualiser()
+        self.viewer: dataVisualiser = dataVisualiser(file)
 
         self.n_plots: int = 0
 

@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use std::env;
 
 fn main() {
-    println!("cargo:rerun-if-changed=motors_raw");
+    println!("cargo:rerun-if-changed=raw_thrust_profiles");
     println!("cargo:rerun-if-changed=motors_build_config.yaml");
     println!("cargo:rerun-if-changed=build-motors.py");
     let here = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap());

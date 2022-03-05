@@ -1,6 +1,6 @@
 /target
-roket.code-workspace
-launch.csv
+*.code-workspace
+/out
 rocketengines.jpg
 __pycache__/
 *.py[cod]

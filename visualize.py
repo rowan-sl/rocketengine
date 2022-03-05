@@ -11,8 +11,8 @@ from vis.plotter import plotter;
 
 # plt.show()
 
-p = plotter()
-p.read_header("launch.csv")
+p = plotter("out/launch.csv")
+p.read_header("out/launch.csv")
 
 # p.create_2d_graph(['time', 'vel_x', 'vel_y', 'vel_z'], 'time (sec)', 'velocity (m/s)', True)
 # p.create_2d_graph(['time', 'accel_x', 'accel_y', 'accel_z'], 'time (sec)', 'acceleration (m/s^2)', True)

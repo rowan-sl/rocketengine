@@ -1,8 +1,9 @@
 import csv
 
 class dataVisualiser:
-    def __init__(self):
+    def __init__(self, file):
         self.allDataDescriptions = []
+        self.file = file
 
     def graph_from_csv(self, datapoints):
         descriptionNum = 0
@@ -14,7 +15,7 @@ class dataVisualiser:
                     pointsToLog.append(descriptionNum)
             descriptionNum += 1
             
-        with open('launch.csv', newline='\n') as pathFile:
+        with open(self.file, newline='\n') as pathFile:
             reader = csv.reader(pathFile, delimiter=',', quotechar='"')
             logList = []
             dataOut = []

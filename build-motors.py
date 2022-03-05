@@ -3,6 +3,9 @@ import xml.etree.ElementTree as ET
 import yaml
 import os
 
+# genereates the files in src/motor/raw/ based on raw thrust files in motors_raw
+# run by cargo (build.rs)
+
 cwd = pathlib.Path(__file__).parent
 
 def load_motor_file(file_name):
@@ -58,7 +61,7 @@ def interpolate_thrust(thrust_curve, timeStep):
         lPoint = point
     return thrustList
 
-with open("motors_build_config.yaml", "r") as settingsFile:
+with open("config/motors_build_config.yaml", "r") as settingsFile:
     settings = yaml.load(settingsFile, Loader=yaml.FullLoader)
 
 config = settings["cfg"]
@@ -66,7 +69,7 @@ config = settings["cfg"]
 interpolation_step = config["interp_step"]
 
 manifest = ""
-for file in cwd.joinpath("motors_raw").iterdir():
+for file in cwd.joinpath("raw_thrust_profiles").iterdir():
     data = load_motor_file(file)
     res = ""
     res += f"pub const DATA: [[f64; 3]; {len(data['data'])}] = [\n"
