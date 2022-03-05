@@ -7,7 +7,7 @@ edition = "2021"
 
 [workspace]
 members = [
-    "ZegeSim-rs"
+    "ZegeSim-rs",
 ]
 
 [dependencies]
@@ -17,6 +17,9 @@ yaml-rust = "0.4.5"
 rand = "0.8.5"
 assert_approx_eq = "1.1.0"
 serde = { version = "1.0.136", features = ["derive"] }
+
+[dev-dependencies]
+xml-rs = "0.8.4"
 
 [dependencies.micromath]
 version = "2.0"

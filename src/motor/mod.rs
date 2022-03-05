@@ -1,3 +1,5 @@
+pub mod raw;
+
 use crate::{secs, math::F64x3};
 
 fn interpolate_two(current: (f64, F64x3), next: (f64, F64x3), interpolated_step: f64) -> Vec<(f64, F64x3)> {
