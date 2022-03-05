@@ -76,7 +76,7 @@ for file in cwd.joinpath("motors_raw").iterdir():
     res += f"pub const DRY_WEIGHT: f64 = {data['dry_weight']};\n"
     res += f"pub const FUEL_WEIGHT: f64 = {data['fuel_weight']};\n"
     res += f"pub const MOTOR_ID: &str = \"{data['name']}\";\n"
-    manifest += f"pub mod {data['name']};\n"
+    manifest += f"#[allow(non_snake_case)] pub mod {data['name']};\n"
     
     with open(f"src/motor/raw/{data['name']}.rs", "w") as f:
         f.write(res)
