@@ -18,8 +18,10 @@ p.read_header("launch.csv")
 # p.create_2d_graph(['time', 'accel_x', 'accel_y', 'accel_z'], 'time (sec)', 'acceleration (m/s^2)', True)
 # p.create_2d_graph(['time', 'mass'], 'time (sec)', 'weight', True)
 
-p.create_2d_graph(['time', 'accel_x', 'accel_y', 'accel_z', 'accel_ng_x', 'accel_ng_y', 'accel_ng_z', 'vel_x', 'vel_y', 'vel_z'], 'time (sec)', 'accel (m/s^2), accel (no grav), velocity (m/s)', True)
+p.create_2d_graph(['time', 'accel_x', 'accel_y', 'accel_z', 'vel_x', 'vel_y', 'vel_z'], 'time (sec)', 'accel (m/s^2), velocity (m/s)', True)
 p.create_2d_graph(['time', 'mass'], 'time (sec)', 'weight (g)', True)
+
+p.create_2d_graph(['time', 'pos_x', 'pos_y', 'pos_z'], 'time (secs)', 'location (meters)', True)
 
 p.create_3d_graph(['pos_x', 'pos_y', 'pos_z'], 70.0)
 

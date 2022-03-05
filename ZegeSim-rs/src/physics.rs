@@ -198,7 +198,7 @@ impl PhysicsBody {
         }
     }
 
-    /// clears the rotational&&translational acceleration
+    /// clears the rotational and translational acceleration
     pub fn clear(&mut self) {
         self.acceleration = Vec3::new(0.0, 0.0, 0.0);
         self.rotational_acceleration = Vec3::new(0.0, 0.0, 0.0);
